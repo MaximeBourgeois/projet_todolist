@@ -1,0 +1,15 @@
+#purple{
+    background-color: #370028;
+}
+
+.container-fluid{
+
+   display: flex;
+   align-items: center;
+   top: 0;
+  
+}
+.aubergine{
+    height: 60px;
+    width: 40%;
+}
