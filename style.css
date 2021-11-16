@@ -1,3 +1,4 @@
+
 *{
 margin: 0%;
 padding: 0%;
@@ -5,10 +6,6 @@ box-sizing: border-box;
 
 }
 
-body{
-
-    background-color: white;
-}
 
 .navbar{
 
@@ -36,3 +33,20 @@ body{
     margin-right:10px ;
 
 }
+
+#purple{
+    background-color: #370028;
+}
+
+.container-fluid{
+
+   display: flex;
+   align-items: center;
+   top: 0;
+  
+}
+.aubergine{
+    height: 60px;
+    width: 40%;
+}
+
