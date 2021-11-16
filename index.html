@@ -12,16 +12,28 @@
 </head>
 
 <body>
-    <div id="todoList" class="container-fluid">
-        <h2 class="text-center">My To Do List</h2>
-        <input type="text" id="titleForm" placeholder="Title...">
-        <button type="submit" id="addItem">Ajouter</button>
-      </div>
+    <div id="titleForm" class="header">
+        <h2>Mes résolutions 2022</h2>
+        <form>
+            <input type="text" id="inputItem" placeholder="Votre résolution ...">
+            <button onclick="newElement()" class="addBtn">Ajouter</button>
+        </form>
+    </div>
+
+    <ul id="listItem">
+        <li>Arrêter de fumer</li>
+        <li>Divorcer</li>
+        <li>Se remarier</li>
+        <li>Donner un des enfants ?</li>
+        <li>Faire du sport</li>
+        <li>Réellement boire avec modération</li>
+    </ul>
+
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/91efaa8dbb.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/91efaa8dbb.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
