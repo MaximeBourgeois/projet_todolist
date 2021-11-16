@@ -1,3 +1,39 @@
+
+*{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+
+}
+
+
+.navbar{
+
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    background-color: #370028;
+}
+
+
+
+
+.nav-link{
+
+    margin-left: 20px;
+}
+
+.fas{
+
+    margin-right:10px ;
+
+}
+.far{
+
+    margin-right:10px ;
+
+}
+
 #purple{
     background-color: #370028;
 }
@@ -13,3 +49,4 @@
     height: 60px;
     width: 40%;
 }
+
