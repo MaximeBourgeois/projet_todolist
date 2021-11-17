@@ -1,27 +1,3 @@
-//Cacher le Pop In
-function hide(){
-    wallpaper.style.display="none";
-}
-//Apparition du formulaire
-function formAppeared(){
-    formulaire.style.display="block";
-}
-
-document.getElementById("create").addEventListener("click", hide);
-document.getElementById("createSm").addEventListener("click",hide);
-document.getElementById("create").addEventListener("click", formAppeared);
-document.getElementById("createSm").addEventListener("click",formAppeared);
-
-//Apparition du menu
-function appeared(){
-    menu.style.display="block";
-}
-document.getElementById("appearedMenu").addEventListener("click", appeared);
-function disappeared(){
-    menu.style.display="none";
-}
-document.getElementById("closeMenu").addEventListener("click", disappeared);
-
 
 //stop le chargement des formulaires
 let stopPropagationForm = document.getElementsByTagName("form");
@@ -118,3 +94,29 @@ document.getElementById("validateList").addEventListener("click", function () {
   resultSave()
 })
 resultSave()
+
+//Cacher le Pop In
+function hide(){
+    wallpaper.style.display="none";
+}
+//Apparition du formulaire
+function formAppeared(){
+    formulaire.style.display="block";
+}
+
+document.getElementById("create").addEventListener("click", hide);
+document.getElementById("createSm").addEventListener("click",hide);
+document.getElementById("create").addEventListener("click", formAppeared);
+document.getElementById("createSm").addEventListener("click",formAppeared);
+
+//Apparition du menu
+function appeared(){
+    menu.style.display="block";
+}
+document.getElementById("appearedMenu").addEventListener("click", appeared);
+function disappeared(){
+    menu.style.display="none";
+}
+document.getElementById("closeMenu").addEventListener("click", disappeared);
+
+
