@@ -119,4 +119,17 @@ function disappeared(){
 }
 document.getElementById("closeMenu").addEventListener("click", disappeared);
 
-
+function saveList() {
+    let listUl = document.getElementById("listItem").innerHTML;
+    localStorage.setItem("listUl", JSON.stringify(listUl))
+    let saveUl = localStorage.getItem("listUl");
+    }
+    document.getElementById("validateList").addEventListener("click", saveList)
+   
+    function getValues() {
+      let saveUl = localStorage.getItem("listUl"); 
+      if (saveUl != null) {
+        document.getElementById("listItem").innerHTML = JSON.parse(saveUl)
+      }
+    }
+    getValues()
