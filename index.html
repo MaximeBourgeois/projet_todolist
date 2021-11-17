@@ -46,7 +46,7 @@
             <a href="#" class="navbar-brand text-light mt-5">
                 <div class="diplay-5 font-weight-bold">Menu</div>
             </a>
-            <ul class="navbar-nav d-flex flex-column mt-5 w-100">
+            <ol class="navbar-nav d-flex flex-column mt-5 w-100">
                 <li class="nav-item w-100">
 
                     <a href="#" class="nav-link text-light pl-4"><i class="fas fa-envelope-open-text"
@@ -60,7 +60,7 @@
                     <a href="#" class="nav-link text-light pl-4"><i class="far fa-calendar-plus"
                             style="font-size:30px;color:white"></i>Prochainement</a>
                 </li>
-            </ul>
+            </ol>
         </nav>
     </div>
 
@@ -79,9 +79,28 @@
         </div>
     </div>
 
-    <form id="todoList">
+            <!--Maxime-->
+    <div id="formulaire"> 
+        <div id="titleForm" class="header">
+        <h2>Mes résolutions 2022</h2>
+        <form action="#">
+            <input type="text" id="inputItem" placeholder="Votre résolution ...">
+            <button id="addBtn">Ajouter</button>
+        </form>
+        </div>
 
-    </form>
+        <ul id="listItem">
+            <li>Arrêter de fumer</li>
+            <li>Divorcer</li>
+            <li>Se remarier</li>
+            <li>Donner un des enfants ?</li>
+            <li>Faire du sport</li>
+            <li>Réellement boire avec modération</li>
+        </ul>
+        <button class="d-none d-md-block" id="validateList">Valider la liste</button>
+        <button class="d-block d-lg-none" id="validateSm">Valider </button>
+    </div>
+   
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
