@@ -13,10 +13,10 @@ function newElement() {
   console.log(li)
   let inputValue = document.getElementById("inputItem").value;
   //créer un noeud de texte, enfant de la liste
-  let t = document.createTextNode(inputValue);
-  li.appendChild(t);
+  let createLi = document.createTextNode(inputValue);
+  li.appendChild(createLi);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("Vous devez remplir le champ !");
   } else {
     document.getElementById("listItem").appendChild(li);
   }
@@ -35,4 +35,61 @@ function newElement() {
     }
   }
 }
+document.getElementById("addBtn").addEventListener("click", newElement)
 
+// Créer un bouton "fermer" et l’ajouter à chaque élément de liste
+var myNodelist = document.getElementsByTagName("li");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Cliquez sur un bouton de fermeture pour masquer l’élément de liste actuel
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Ajouter un symbole "coché" en cliquant sur un élément de liste
+var list = document.getElementById('listItem');
+list.addEventListener('click', function(e) {
+  if (e.target.tagName === 'LI') {
+    e.target.classList.toggle('checked');
+  }
+}, false);
+
+function saveList() {
+  let listUl = document.getElementById("listItem").innerHTML;
+  localStorage.setItem("listUl", JSON.stringify(listUl))
+  console.log(listUl)
+}
+document.getElementById("validateList").addEventListener("click", saveList)
+
+function recording(key, value) {
+  localStorage.setItem(key, value);
+}
+function save() {
+  recording(listItem.id, listItem.checked);
+}
+function resultSave() {
+  let saveInformations = localStorage.getItem("listItem")
+  // rappeler que la variable existe et qu'il est vrai
+  if (saveInformations!=null) {
+      saveInformations = parseInt(saveInformations)
+}
+saveInformations++
+
+}
+document.getElementById("validateList").addEventListener("click", function () {
+  save()
+  resultSave()
+})
+resultSave()
